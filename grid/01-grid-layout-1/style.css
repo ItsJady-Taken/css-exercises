@@ -22,22 +22,31 @@ html {
 
 .header {
   background-color: #006157;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row: 1 / 2;
 }
 
 .sidebar {
   background-color: #005B94;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 2 / 4 ;
 }
 
 .nav {
   background-color: #642cde;
+  grid-column: 3 / 5;
 }
 
 .article {
   background-color: #7E1DC3;
+  grid-column: 3 / 5;
 }
 
 .footer {
   background-color: #393f4d;
+  grid-column: 1 / 5;
 }
 
 .article p {
@@ -45,4 +54,11 @@ html {
   font-family: sans-serif;
   color: white;
   text-align: left;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 100px calc(100px * 3);
+  grid-template-rows: 100px 100px calc(100px * 5) 100px;
+  gap: 15px;
 }
